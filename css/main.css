@@ -3,6 +3,7 @@
    --text-color: #6c757d;
    --accent-color: #ffd333;
    --contrast-color: #3d464d;
+   --gray-color: #cccccc;
 }
 
 
@@ -26,13 +27,40 @@ a:hover {
    text-decoration: none;
 }
 
-img{
+img {
    max-width: 100%;
    height: auto;
 }
-.btn, .dropdown-menu {
+
+.btn,
+.dropdown-menu,
+.form-control {
    border-radius: 0;
 }
+
+.form-control:focus {
+   color: var(--text-color);
+   border-color: var(--accent-color);
+   box-shadow: none;
+}
+
+.form-control::placeholder {
+   color: var(--gray-color);
+}
+
+.btn-warning {
+   background-color: var(--accent-color);
+   color: var(--contrast-color);
+}
+
+.btn-outline-warning {
+   border-color: var(--accent-color);
+}
+.btn-outline-warning:hover {
+   background-color: var(--accent-color);
+   color: var(--contrast-color);
+}
+
 /*=========================== General rules=================================*/
 .wrapper {
    min-height: 100%;
@@ -50,6 +78,7 @@ main.main {
 .header-top-phone a {
    text-decoration: none;
 }
+
 .header-top-phone a:hover {
    text-decoration: underline;
 }
@@ -83,8 +112,26 @@ ul.social-icons a:hover {
    color: var(--accent-color);
 }
 
-.header-top .btn{
+.header-top .btn {
    background-color: #fff;
 }
 
+.header-logo {
+   text-decoration: none;
+   text-transform: uppercase;
+   color: var(--accent-color);
+   transition: all .3s;
+}
+
+.header-logo:hover {
+   color: var(--contrast-color);
+}
+
+.cart-buttons, .btn {
+   color: var(--contrast-color);
+   transition: all .3s;
+}
+.cart-buttons, .btn:hover {
+
+}
 /*=========================== Header rules=================================*/
