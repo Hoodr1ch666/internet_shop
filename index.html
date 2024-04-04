@@ -95,7 +95,7 @@
                      <a class="header-logo fs-1" href="index.html">E-Shop</a>
                   </div>
 
-                  <div class="col-6 col-md-4 order-md-2 cart-buttons text-end">
+                  <div class="col-sm-6 col-md-4 order-md-2 cart-buttons text-end d-none d-md-block">
                      <a class="btn" href="#">
                         <i class="fa-solid fa-heart"></i>
                         <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
@@ -106,43 +106,8 @@
                         <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
                      </button>
 
-                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart"
-                        aria-labelledby="offcanvasExampleLabel">
-                        <div class="offcanvas-header">
-                           <h5 class="offcanvas-title" id="offcanvasCartleLabel">Offcanvas</h5>
-                           <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                              aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                           <div>
-                              Some text as placeholder. In real life you can have the elements you have chosen. Like,
-                              text, images, lists, etc.
-                           </div>
-                           <div class="dropdown mt-3">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                 Dropdown button
-                              </button>
-                              <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item" href="#">Action</a></li>
-                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                     <!--offcanvas-->
-                     <a class="btn" href="#">
-                        <i class="fa-solid fa-heart"></i>
-                        <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
-                     </a>
-                     <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                        aria-controls="offcanvasCart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
-                     </button>
                   </div>
-
-                  <div class="col-md-4 order-md-1 mt-2">
+                  <div class="col-md-4 col-sm-6 order-md-1 mt-2 mt-md-0">
                      <form action="">
                         <div class="input-group">
                            <input type="text" class="form-control" name="search" placeholder="Searching..."
@@ -155,9 +120,33 @@
                   </div>
                </div>
             </div>
-         </div><!--header-middle-->
+         </div>
+         <!--header-middle-->
+         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasCartleLabel">Cart</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like,
+                  text, images, lists, etc.
+               </div>
+               <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                     Dropdown button
+                  </button>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#">Action</a></li>
+                     <li><a class="dropdown-item" href="#">Another action</a></li>
+                     <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--offcanvas-->
       </header>
-      <div class="header-bottom sticky-top">
+      <div class="header-bottom sticky-top" id="header-nav">
          <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -226,78 +215,145 @@
                      </ul>
                   </div>
                </div>
+
+               <div class="d-block d-md-none">
+                  <a class="btn" href="#">
+                     <i class="fa-solid fa-heart"></i>
+                     <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
+                  </a>
+                  <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                     aria-controls="offcanvasCart">
+                     <i class="fa-solid fa-cart-shopping"></i>
+                     <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
+                  </button>
+               </div>
+
             </div>
          </nav>
-      </div><!--header-bottom-->
+      </div>
+      <!--header-bottom-->
 
       <main class="main">
+
+         <div id="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+               <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                  aria-label="Slide 1"></button>
+               <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+               <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+               <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+               <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="img/slider/1.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h2>First slide label</h2>
+                     <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/slider/2.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h2>Second slide label</h2>
+                     <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/slider/3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h2>Third slide label</h2>
+                     <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/slider/4.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h2>Fourth slide label</h2>
+                     <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img src="img/slider/5.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                     <h2>Fifth slide label</h2>
+                     <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+               </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+            </button>
+         </div>
+
+         <section class="advantages">
+            <div class="container-fluid">
+               <div class="row mb-5">
+                  <div class="col-12">
+                     <h2 class="section-title">
+                        <span>
+                           Наши приемущества
+                        </span>
+                     </h2>
+                  </div>
+               </div>
+
+               <div class="row gy-3 items">
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="item">
+                        <p><i class="fas fa-shipping-fast"></i></p>
+                        <p>Прямые поставки от производителей брендов</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="item">
+                        <p> <i class="fas fa-cubes"></i></p>
+                        <p>Широкий ассортимент товаров. Более 10 тыс. наименований</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="item">
+                        <p><i class="fas fa-hand-holding-usd"></i></p>
+                        <p>Приятные и конкурентные цены</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                     <div class="item">
+                        <p><i class="fas solid fa-user-graduate"></i></p>
+                        <p>Консультации от проффесионалов</p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </section>
+         <section class="featured-products">
+            <div class="container-fluid">
+               <div class="row mb-5">
+                  <div class="col-12">
+                     <h2 class="section-title">
+                        <span>Рекомендуемые товары</span>
+                     </h2>
+                  </div>
+               </div>
+
+               <div class="row"></div>
+
+            </div>
+         </section>
          <div class="container-fluid">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsam doloremque rerum commodi, recusandae
-               fugiat vitae sit id nisi unde qui blanditiis explicabo error eveniet. Eligendi blanditiis accusantium
-               eaque reiciendis.</p>
-            <p>Libero a quia maxime voluptate atque, facere cupiditate expedita! Odit cupiditate est consequuntur
-               molestias, cum nulla placeat quisquam harum velit! Explicabo voluptas nobis iure ab optio pariatur iste
-               sapiente dicta?</p>
-            <p>Veritatis doloribus iusto alias natus dolores, aperiam repudiandae est a accusamus, amet, itaque minus et
-               tempore libero delectus vel doloremque harum quisquam unde quasi ducimus facilis neque expedita ullam!
-               Sed!</p>
-            <p>Nostrum corrupti, a iste delectus nobis cum soluta laboriosam rerum obcaecati minus blanditiis mollitia
-               temporibus non hic dolorem iure ipsa error maxime suscipit rem voluptatem? Soluta qui facere animi
-               quisquam!</p>
-            <p>Facere molestias vero consectetur odio iure repudiandae quaerat! Ab facilis eos magnam ipsum est,
-               officiis aspernatur fugiat illo laudantium harum adipisci. Ad, nobis ex error distinctio aperiam at optio
-               nihil!</p>
-            <p>Qui, accusamus reiciendis officia tenetur ea corporis excepturi deleniti cum reprehenderit quis ducimus?
-               Deleniti totam dolorem dicta fugit a. Hic unde soluta libero explicabo deleniti fuga, commodi laborum
-               doloremque porro?</p>
-            <p>Fuga eveniet, est quas at consequatur consectetur aliquam saepe. Dolorem fugit harum, similique quibusdam
-               ex porro inventore, assumenda alias odio voluptate magnam odit nam voluptas sit ea, reiciendis cupiditate
-               quaerat?</p>
-            <p>Adipisci numquam quis, consequuntur quo quibusdam itaque totam beatae blanditiis illum quidem saepe iure
-               provident harum perferendis! Facere aliquid ea temporibus cumque minima a ad nihil, at nesciunt sit.
-               Pariatur.</p>
-            <p>Iure consequatur ea quidem nisi, aperiam sequi eaque perspiciatis quis, molestiae sit vero hic eos
-               nesciunt natus! Veniam molestiae, odit labore, maxime debitis odio ad magni voluptate distinctio est
-               velit.</p>
-            <p>Qui quasi veritatis odit corporis, velit officiis nemo voluptas perspiciatis omnis aliquid neque dolore
-               amet, sunt enim blanditiis assumenda dicta quis? Quis, molestias! Totam odit, exercitationem obcaecati
-               harum expedita earum?</p>
-            <p>Odit quae delectus accusantium dolorem. Delectus, quo fugit esse deleniti inventore ex veniam doloremque
-               nulla ea aspernatur ut possimus. Vero explicabo vel perferendis id pariatur odio quidem magni modi eos!
-            </p>
-            <p>Corporis amet laudantium minus assumenda! Suscipit nulla vero reprehenderit ullam, corrupti dicta
-               voluptatem natus molestiae tempore quae quidem officia sapiente aut delectus accusamus sint harum odit
-               et, assumenda atque hic.</p>
-            <p>Atque minus sapiente nam odit minima soluta rem impedit suscipit. Corrupti eius commodi voluptatem
-               deleniti natus excepturi aliquam aperiam unde reprehenderit, obcaecati accusantium quos, repellat id at.
-               Debitis, voluptates officiis.</p>
-            <p>Ex debitis dolore molestiae quae repudiandae ab nulla vitae doloremque ratione earum et in sunt repellat
-               unde eaque consectetur natus perferendis, amet iure. Repellendus beatae adipisci maiores velit, commodi
-               reiciendis!</p>
-            <p>Porro iste temporibus obcaecati, dicta corporis quia illo minima, dolore aperiam odio tempora saepe odit
-               quibusdam incidunt et dolor esse quos id a, provident unde. Totam similique nulla magni rem.</p>
-            <p>Accusantium iusto voluptatum enim, non ratione, obcaecati minima quo quaerat quod quibusdam ad cum
-               beatae? Optio minima impedit nam consequatur earum! Quos cupiditate quod harum iusto maiores libero nemo
-               debitis.</p>
-            <p>Molestiae velit cumque ea dolores magnam quisquam eligendi quaerat, dolor ratione animi placeat fuga
-               voluptatibus eaque maxime rerum neque error nemo! Provident unde est, tempore vero animi ipsum omnis
-               illo?</p>
-            <p>Sunt, voluptatibus suscipit nam magni ratione earum ipsum quisquam commodi? Aperiam harum nam nemo
-               quisquam iure voluptatum, incidunt perferendis tempora officia blanditiis ipsum cum deserunt quas soluta
-               nobis. Culpa, cupiditate.</p>
-            <p>Sint eos magni optio neque alias minus et suscipit veniam cumque temporibus. Non tempore repellat
-               reiciendis delectus placeat vero rerum cupiditate porro consectetur, ipsam corrupti? Eveniet eligendi
-               sequi et voluptas?</p>
-            <p>Mollitia autem explicabo non commodi dolore modi officia aliquam aut optio, dolorem itaque numquam eaque.
-               Assumenda nihil culpa nostrum, placeat cum totam doloremque deleniti dolores debitis eligendi, quod
-               architecto modi.</p>
          </div>
       </main>
-      <footer class="footer">Footer</footer>
+      <footer class="footer"></footer>
    </div>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="assets/js/main.js"></script>
+   <script src="js/main.js"></script>
 </body>
 
 </html>
