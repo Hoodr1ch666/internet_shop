@@ -171,6 +171,24 @@ ul.social-icons a:hover {
    border: 1px solid var(--contrast-color);
 }
 
+.offcanvascart-table .product-img-td {
+   width: 70px;
+   text-align: center;
+}
+
+.offcanvascart-table img {
+   max-width: 50px;
+}
+
+.offcanvascart-table a {
+   text-decoration: none;
+   display: block;
+}
+
+.offcanvascart-table a:hover {
+   text-decoration: underline;
+}
+
 .header-bottom {
    border-top: 3px solid var(--accent-color);
    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
@@ -420,9 +438,11 @@ footer a:hover {
    z-index: 10;
    display: none;
 }
-#top:hover{
-opacity: 1;
+
+#top:hover {
+   opacity: 1;
 }
+
 /*=========================== btn top =================================*/
 @media only screen and (min-width: 992px) {
    .header-bottom .navbar .dropdown-menu-end {

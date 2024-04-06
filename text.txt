@@ -31,3 +31,37 @@
 <i class="fas fa-cubes"></i>Широкий ассортимент товаров. Более 10 тыс. наименований
 <i class="fas fa-hand-holding-usd"></i>Приятные и конкурентные цены
 <i class="fas solid fa-user-graduate"></i>Консультации от проффесионалов
+
+
+
+// let href = item.href.split('#').pop();
+
+<div class="col-sm-6 col-md-4 order-md-2 cart-buttons text-end d-none d-md-block">
+                     <a class="btn" href="#">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
+                     </a>
+                     <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
+                        aria-controls="offcanvasCart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
+                     </button>
+                  </div>
+
+                   class="d-block d-md-none"
+
+
+// const offcanvasCartEl = document.getElementById('offcanvasCart');
+// const offcanvasCart = new bootstrap.Offcanvas(offcanvasCartEl);
+// document.querySelectorAll('.closecart').forEach(item => {
+//    item.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       offcanvasCart.hide();
+      
+//       let href = item.dataset.href;
+
+//       offcanvasCartEl.addEventListener('hidden.bs.offcanvas', () => {
+//          document.getElementById(href).scrollIntoView();
+//       });
+//    });
+// });
